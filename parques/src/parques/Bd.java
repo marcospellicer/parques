@@ -109,6 +109,18 @@ public class Bd {
         }
         return aux;
      }
+        public String editarParques(String ciu , String par , double ext){
+       conectar();
+       String aux="";
+         try {
+            Statement s = (Statement) con.createStatement(); 
+           s.executeUpdate("update parque set nombre = '"+par+"' , extension = '"+ext+"' , idCiudad = (select id from ciudad where ciudad='"+ciu+"')");
+            desconectar();
+        } catch (SQLException ex) {
+            Logger.getLogger(Bd.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return aux;
+     }
          public String contarParquesPorCiudad(String ciu){
        conectar();
        String aux="";

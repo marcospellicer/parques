@@ -66,7 +66,17 @@ public class Parques {
                     break;
                 }
                 case 4:{
-                    
+                    Scanner s = new Scanner(System.in);
+                    Scanner d = new Scanner(System.in);
+                    System.out.println("dime el nombre del parque");
+                    String aux = s.nextLine();
+                    System.out.println("****************"+"\n"+parques.mostrarParquesPorCadena(aux)+"****************");
+                    System.out.println("dime el nombre del parque");
+                    String parque = s.nextLine();
+                    System.out.println("dime el nombre de la ciudad del parque");
+                    String ciudad = s.nextLine();
+                    System.out.println("dime la extension parque");
+                    double ext = d.nextDouble();
                     break;
                 }
                 case 5:{
